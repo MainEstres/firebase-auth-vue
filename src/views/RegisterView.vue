@@ -10,6 +10,8 @@ const register = async () => {
         const userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value);
         const user = userCredential.user;
         console.log('usuario registrado', user);
+        email.value = "";
+        password.value = "";
        
     } catch (error) {
         console.log(error)
